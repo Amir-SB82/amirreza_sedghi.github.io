@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Resume Website</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="company-icons">
+    <img src="fum.png" alt="Company 1" title="Company 1">
+    <img src="logofumcare.png" alt="Company 2" title="Company 2">
+    <img src="ENG.jpg" alt="Company 3" title="Company 3">
+  </div>
+
+  <div class="profile-section">
+    <img src="myphoto.jpg" alt="Official Photo" class="profile-photo" width="120" height="120">
+    <div class="profile-bio">
+      <h1>Amirreza sedghi bagheri</h1>
+      <div class="partner-name">partner:shaghayegh shenideh</div>
+      <p>Hello! I am an Electrical Engineering graduate from Ferdowsi University, specializing in robotics and system control. My field of work also connects with Artificial Intelligence, and I have experience in Machine Learning and Deep Learning.</p>
+    </div>
+  </div>
+
+  <!-- <div class="sidebar-left">
+    <img src="side1.jpg" alt="Engineering Decor 1">
+    <img src="side2.jpg" alt="Engineering Decor 2">
+    <img src="side3.jpg" alt="Engineering Decor 3">
+  </div>
+  <div class="sidebar-right">
+    <img src="side4.jpg" alt="Engineering Decor 4">
+    <img src="side5.jpg" alt="Engineering Decor 5">
+    <img src="side6.jpg" alt="Engineering Decor 6">
+  </div> -->
+
+  <div class="tabs">
+    <input type="radio" id="tab-academic" name="tab-group" checked>
+    <label for="tab-academic">Academic</label>
+    <input type="radio" id="tab-work" name="tab-group">
+    <label for="tab-work">Work</label>
+    <input type="radio" id="tab-sports" name="tab-group">
+    <label for="tab-sports">Sports</label>
+
+    <div class="tab-content" id="content-academic">
+      <h2>Academic(Ferdowsi University of Mashhad)</h2>
+      <p>I'm currently studying Electrical Engineering at Ferdowsi University of Mashhad, specializing in Systems Control. I've been active in both student and high school Olympiads. Additionally, I've worked on embedded programming and am conducting research at the university's Robotics Research Center.</p>
+      <div class="center-photo">
+        <img src="Faculty_of_Engineering_Ferdowsi_University_of_Mashhad.jpg" alt="Academic" width="250">
+      </div>
+      <!-- <p>See my <a href="https://www.exampleuniversity.edu" target="_blank">university profile</a>.</p> -->
+    </div>
+    <div class="tab-content" id="content-work">
+      <h2>Work(FUM CARE)</h2>
+      <p>I'm currently working at the Robotics Research Center at Ferdowsi University(FUM CARE). My specialized work involves controlling industrial robots using the CANopen protocol. I'm also proficient in STM32 microcontroller programming and familiar with ESP32 microcontrollers. I have experience with IMU research sensors and their calibration methods, and I'm currently developing a neural network model using these sensors.</p>
+      <div class="work-photos">
+        <img src="myphoto.jpg" alt="Work" width="250">
+        <img src="myphoto2.jpg" alt="Work" width="250">
+      </div>
+
+      <p>See my <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>.</p>
+    </div>
+    <div class="tab-content" id="content-sports">
+      <h2>Sports</h2>
+      <p>As a child, I pursued martial arts, and later, I played football for five years. At 19, I was a boxer for a year, and I've been a fighter for various periods over time. My athletic activities aren't limited to these; I've also participated in sports like swimming, badminton, bodybuilding, and more.</p>
+      <div class="center-photo">
+        <img src="sport.jpg" alt="Sports" width="250">
+      </div>
+      <!-- <p>See my <a href="https://www.strava.com" target="_blank">Strava</a> profile.</p> -->
+    </div>
+  </div>
+
+  <div class="contact-fab" id="contactFab">
+    <span class="fab-text">Contact Me</span>
+    <div class="contact-options" id="contactOptions">
+      <a href="amirreza.sedghibagheri@gmail.com" target="_blank" title="Email"><img src="email.webp" alt="Email"></a>
+      <a href="https://t.me/FWMBAG" target="_blank" title="Telegram"><img src="telegram.webp" alt="Telegram"></a>
+      <a href="https://wa.me/+989046044782" target="_blank" title="WhatsApp"><img src="what.png" alt="WhatsApp"></a>
+      <a href="https://instagram.com/amirr.sedghi" target="_blank" title="Instagram"><img src="instagram.webp" alt="Instagram"></a>
+    </div>
+  </div>
+
+  <script>
+    const fab = document.getElementById('contactFab');
+    const options = document.getElementById('contactOptions');
+    fab.addEventListener('click', function(e) {
+      e.stopPropagation();
+      options.classList.toggle('show');
+    });
+    document.addEventListener('click', function() {
+      options.classList.remove('show');
+    });
+  </script>
+</body>
+</html>

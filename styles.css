@@ -1,0 +1,241 @@
+body {
+  background-color: #181818;
+  font-family: Arial, sans-serif;
+  color: #333;
+  margin: 40px;
+}
+
+h1 {
+  color: #007acc;
+}
+
+.company-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+  background: #fff;
+}
+.company-icons img {
+  height: 100px;
+  width: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  background: #fff;
+  padding: 8px;
+}
+
+.tabs {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.18), 0 0 0 6px #fff, 0 0 0 12px #222;
+  padding: 30px 20px 20px 20px;
+  border: 2px solid #fff;
+}
+.tabs input[type="radio"] {
+  display: none;
+}
+.tabs label {
+  display: inline-block;
+  padding: 10px 30px;
+  margin-right: 5px;
+  background: #e0e0e0;
+  color: #333;
+  border-radius: 10px 10px 0 0;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.tabs input[type="radio"]:checked + label {
+  background: #007acc;
+  color: #fff;
+}
+.tabs .tab-content {
+  display: none;
+  padding: 20px 0 0 0;
+}
+#tab-academic:checked ~ #content-academic,
+#tab-work:checked ~ #content-work,
+#tab-sports:checked ~ #content-sports {
+  display: block;
+}
+.tab-content img {
+  display: block;
+  margin: 15px 0;
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.tab-content a {
+  color: #007acc;
+  text-decoration: none;
+  font-weight: bold;
+}
+.tab-content a:hover {
+  text-decoration: underline;
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.18), 0 0 0 6px #fff, 0 0 0 12px #222;
+  padding: 24px 32px;
+  max-width: 650px;
+  margin: 0 auto 32px auto;
+  gap: 28px;
+}
+.profile-photo {
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  border: 4px solid #e0e0e0;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  background: #fafafa;
+}
+.profile-bio {
+  flex: 1;
+}
+.profile-bio h1 {
+  margin: 0 0 10px 0;
+  color: #007acc;
+  font-size: 2rem;
+}
+.profile-bio p {
+  margin: 0;
+  font-size: 1.08rem;
+  color: #444;
+}
+
+.partner-name {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 2px;
+  margin-bottom: 10px;
+  font-weight: normal;
+  letter-spacing: 0.2px;
+}
+
+.work-photos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin: 15px 0;
+}
+.work-photos img {
+  margin: 0;
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.center-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.sidebar-left, .sidebar-right {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  z-index: 1;
+  background: transparent;
+  pointer-events: none;
+}
+.sidebar-left {
+  left: 0;
+}
+.sidebar-right {
+  right: 0;
+}
+.sidebar-left img, .sidebar-right img {
+  width: 80px;
+  height: auto;
+  filter: brightness(0.15) grayscale(1);
+  opacity: 0.85;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+  background: #111;
+  pointer-events: auto;
+}
+
+.contact-fab {
+  position: fixed;
+  left: 32px;
+  bottom: 32px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background: #181818;
+  border-radius: 50px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  padding: 12px 22px 12px 12px;
+  transition: box-shadow 0.2s, background 0.2s;
+}
+.contact-fab:hover {
+  background: #222;
+  box-shadow: 0 6px 32px rgba(0,0,0,0.22);
+}
+.fab-text {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-left: 12px;
+  margin-right: 6px;
+  letter-spacing: 0.5px;
+}
+.contact-options {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  left: 100%;
+  bottom: 0;
+  background: #222;
+  border-radius: 30px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  padding: 10px 18px;
+  gap: 18px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: opacity 0.2s, transform 0.2s;
+}
+.contact-options.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.contact-options a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-options img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  transition: background 0.2s;
+}
+.contact-options a:hover img {
+  background: #007acc;
+} 
